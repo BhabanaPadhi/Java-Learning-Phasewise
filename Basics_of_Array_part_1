@@ -1,0 +1,198 @@
+Day 1: Topics covered are:
+
+* Array memory representation in Java
+* Static vs dynamic arrays
+* Java's array utility methods (Arrays class)
+* ArrayList vs Arrays in Java
+
+
+
+
+Array Memory Representation in Java
+      In Java, arrays are stored in memory with the following characteristics:
+
+Contiguous Memory Allocation: Arrays occupy a continuous block of memory where elements are stored sequentially.
+Reference Type: In Java, an array variable is a reference variable that points to an object containing the array elements.
+Memory Structure:
+
+The array reference (4 bytes on 32-bit JVM, 8 bytes on 64-bit JVM) points to the array object in heap memory
+The array object includes:
+
+A header with type information and length (typically 12-16 bytes)
+The actual array data
+
+
+
+
+Element Storage:
+
+      Primitive arrays (int[], char[], etc.) store values directly
+      Reference arrays (String[], Object[], etc.) store references to objects, not the objects themselves
+
+
+Addressing: Java uses zero-based indexing. Each element can be accessed using the base address plus an offset: baseAddress + (index * elementSize)
+Memory Usage Example:
+
+int[] array (4 bytes per element): An array of 100 integers uses approximately 416 bytes (16-byte header + 100 × 4 bytes)
+Object[] array: An array of 100 object references uses approximately 416-816 bytes (depending on JVM), plus the memory for each referenced object
+
+
+
+Static vs Dynamic Arrays
+      Static Arrays (Traditional Java Arrays)
+
+      Fixed Size: Size must be specified at creation time and cannot be changed afterward
+
+javaCopyint[] numbers = new int[10]; // Size fixed at 10 elements
+
+Memory Allocation: All memory is allocated at once during creation
+Performance:
+
+O(1) time complexity for access, insertion, and deletion (at known positions)
+No overhead for resizing
+
+
+Limitations:
+
+Cannot grow or shrink after creation
+Must handle index out of bounds manually
+Wasted memory if array is larger than needed
+
+
+
+Dynamic Arrays (Implemented by ArrayList in Java)
+
+Flexible Size: Can grow and shrink as needed
+javaCopyArrayList<Integer> numbers = new ArrayList<>(); // No fixed size
+
+Internal Implementation: Uses a backing array that is resized automatically
+Growth Strategy: When capacity is reached, a new larger array is created (typically 1.5x current size in Java), and elements are copied over
+Performance:
+
+O(1) amortized time complexity for adding elements
+O(n) time complexity for resizing operations
+Extra memory overhead for capacity management
+
+
+Advantages:
+
+Automatically handles capacity
+More convenient API for common operations
+
+
+
+Java's Array Utility Methods (Arrays Class)
+The java.util.Arrays class provides powerful utilities for working with arrays:
+
+Searching:
+
+Arrays.binarySearch(array, key): Finds element in a sorted array using binary search
+
+javaCopyint index = Arrays.binarySearch(sortedArray, 42);
+
+Sorting:
+
+Arrays.sort(array): Sorts array elements (uses dual-pivot quicksort for primitives)
+Arrays.sort(array, comparator): Sorts using custom comparator
+Arrays.parallelSort(array): Parallel sorting for large arrays
+
+javaCopyArrays.sort(numbers);
+Arrays.sort(employees, Comparator.comparing(Employee::getSalary));
+
+Filling/Setting Values:
+
+Arrays.fill(array, value): Fills entire array with specified value
+Arrays.fill(array, fromIndex, toIndex, value): Fills portion of array
+
+javaCopyArrays.fill(numbers, 0);  // Reset all elements to zero
+
+Equality and Comparison:
+
+Arrays.equals(array1, array2): Checks element-by-element equality
+Arrays.deepEquals(array1, array2): For multi-dimensional arrays
+
+javaCopyboolean areEqual = Arrays.equals(arr1, arr2);
+
+Copying:
+
+Arrays.copyOf(array, newLength): Creates copy with specified length
+Arrays.copyOfRange(array, fromIndex, toIndex): Copies portion
+
+javaCopyint[] copy = Arrays.copyOf(original, original.length);
+
+Converting:
+
+Arrays.asList(array): Converts array to fixed-size List
+Arrays.stream(array): Converts to stream for functional operations
+
+javaCopyList<String> list = Arrays.asList("a", "b", "c");
+IntStream stream = Arrays.stream(numbers);
+
+String Representation:
+
+Arrays.toString(array): Returns string representation
+Arrays.deepToString(array): For multi-dimensional arrays
+
+javaCopySystem.out.println(Arrays.toString(numbers));
+
+
+ArrayList vs Arrays in Java
+Arrays
+
+Fixed Size: Cannot be resized after creation
+Performance: Slightly better performance and memory usage
+Syntax: Uses square bracket notation
+javaCopyint[] numbers = new int[10];
+numbers[0] = 42;
+
+Type Restrictions: Can store primitives (int, char, etc.) directly
+Limitations:
+
+Basic functionality only
+No built-in methods for adding/removing elements
+Must manage size manually
+
+
+
+ArrayList
+
+Dynamic Size: Automatically resizes as needed
+javaCopyArrayList<Integer> list = new ArrayList<>();
+list.add(42); // Grows as needed
+
+Generic Type: Uses generics, can't store primitives directly (requires wrapper classes)
+javaCopyArrayList<Integer> list = new ArrayList<>(); // Not int, but Integer
+
+Rich API: Many useful methods
+
+add(), remove(), get(), set()
+contains(), indexOf(), clear()
+addAll(), removeAll(), subList()
+
+
+Overhead: Slightly more memory overhead and potentially slower for very performance-critical applications
+Advantages:
+
+Much more flexibility and convenience
+Handles resizing automatically
+Part of Collections framework, integrates with other collections
+
+
+
+When to Use Each
+Use Arrays when:
+
+Size is fixed and known in advance
+Working with primitive types for maximum performance
+Memory usage is critical
+Direct access to memory is needed
+Multi-dimensional data structures are required
+Very performance-sensitive code
+
+Use ArrayList when:
+
+Size may change during program execution
+Need convenience methods for adding/removing elements
+Want to leverage Collections framework features
+Code readability and maintenance is more important than absolute performance
+Working with objects rather than primitives
