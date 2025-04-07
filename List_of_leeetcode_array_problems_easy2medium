@@ -1,0 +1,129 @@
+# Array LeetCode Practice Questions
+
+## Basic Array Operations (Easy)
+
+1. [1. Two Sum](https://leetcode.com/problems/two-sum/)
+2. [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+3. [27. Remove Element](https://leetcode.com/problems/remove-element/)
+4. [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+5. [283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+6. [1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)
+7. [1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)
+8. [1299. Replace Elements with Greatest Element on Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/)
+9. [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)
+10. [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
+
+## Array Memory Management (Easy-Medium)
+
+1. [724. Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
+2. [1886. Determine Whether Matrix Can Be Obtained By Rotation](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/)
+3. [566. Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/)
+4. [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)
+5. [119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)
+6. [1672. Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)
+
+## Static Arrays & Java Arrays Methods (Easy-Medium)
+
+1. [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+2. [219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)
+3. [268. Missing Number](https://leetcode.com/problems/missing-number/)
+4. [448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)
+5. [169. Majority Element](https://leetcode.com/problems/majority-element/)
+6. [350. Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
+7. [189. Rotate Array](https://leetcode.com/problems/rotate-array/)
+8. [349. Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
+
+## Dynamic Arrays & ArrayList Concepts (Easy-Medium)
+
+1. [1313. Decompress Run-Length Encoded List](https://leetcode.com/problems/decompress-run-length-encoded-list/)
+2. [1389. Create Target Array in the Given Order](https://leetcode.com/problems/create-target-array-in-the-given-order/)
+3. [1470. Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/)
+4. [442. Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/)
+5. [735. Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) (Good for dynamic insertion/deletion)
+6. [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+
+## Two-Pointer Technique (Easy-Medium)
+
+1. [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+2. [344. Reverse String](https://leetcode.com/problems/reverse-string/)
+3. [557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)
+4. [15. 3Sum](https://leetcode.com/problems/3sum/)
+5. [16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/)
+6. [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
+7. [75. Sort Colors](https://leetcode.com/problems/sort-colors/) (Dutch National Flag algorithm)
+8. [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
+
+## Binary Search on Arrays (Easy-Medium)
+
+1. [704. Binary Search](https://leetcode.com/problems/binary-search/)
+2. [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/)
+3. [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
+4. [278. First Bad Version](https://leetcode.com/problems/first-bad-version/)
+5. [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+6. [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+7. [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+8. [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+
+## Prefix Sums (Easy-Medium)
+
+1. [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)
+2. [1480. Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)
+3. [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+4. [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+5. [523. Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
+6. [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+7. [1423. Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/)
+8. [304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)
+
+## Sliding Window on Arrays (Easy-Medium)
+
+1. [643. Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/)
+2. [1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/)
+3. [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
+4. [713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/)
+5. [1052. Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/)
+6. [567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)
+7. [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+
+## 2D Arrays / Matrix Operations (Easy-Medium)
+
+1. [867. Transpose Matrix](https://leetcode.com/problems/transpose-matrix/)
+2. [832. Flipping an Image](https://leetcode.com/problems/flipping-an-image/)
+3. [48. Rotate Image](https://leetcode.com/problems/rotate-image/)
+4. [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
+5. [73. Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+6. [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
+7. [79. Word Search](https://leetcode.com/problems/word-search/)
+8. [240. Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
+
+## Sorting & Arrays.sort() Applications (Easy-Medium)
+
+1. [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+2. [252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) (Premium)
+3. [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+4. [179. Largest Number](https://leetcode.com/problems/largest-number/)
+5. [274. H-Index](https://leetcode.com/problems/h-index/)
+6. [1366. Rank Teams by Votes](https://leetcode.com/problems/rank-teams-by-votes/)
+7. [1029. Two City Scheduling](https://leetcode.com/problems/two-city-scheduling/)
+8. [973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+
+## Frequency Counting (Easy-Medium)
+
+1. [1. Two Sum](https://leetcode.com/problems/two-sum/)
+2. [169. Majority Element](https://leetcode.com/problems/majority-element/)
+3. [387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)
+4. [383. Ransom Note](https://leetcode.com/problems/ransom-note/)
+5. [299. Bulls and Cows](https://leetcode.com/problems/bulls-and-cows/)
+6. [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+7. [451. Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)
+8. [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+
+## Java-Specific Array Techniques (Mixed Difficulty)
+
+1. [1051. Height Checker](https://leetcode.com/problems/height-checker/) - Use of Arrays.sort()
+2. [1200. Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/) - Sorting with custom comparators
+3. [406. Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/) - Complex sorting
+4. [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) - PriorityQueue & QuickSelect
+5. [937. Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files/) - Custom sorting in Java
+6. [853. Car Fleet](https://leetcode.com/problems/car-fleet/) - Sorting with complex logic
+7. [539. Minimum Time Difference](https://leetcode.com/problems/minimum-time-difference/) - Circular array concept
