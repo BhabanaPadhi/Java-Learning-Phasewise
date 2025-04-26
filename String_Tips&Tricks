@@ -1,0 +1,214 @@
+ 🔥 1. Two Pointers (String Edition)
+
+ ➔ Idea:
+Move two pointers over the string (left and right), either:
+- towards each other
+- or from left to right
+
+Common Uses:
+- Palindrome checking
+- Reversing parts of string
+- Skipping characters conditionally
+
+Example:  
+- Valid Palindrome
+- Reverse Vowels of a String
+
+Tip:  
+When the problem says "compare characters from ends" or "reverse parts," think Two Pointers!
+
+---
+
+ 🔥 2. Sliding Window (Fixed / Variable size)
+
+ ➔ Idea:
+Maintain a substring (window) that moves.
+
+Common Uses:
+- Longest Substring Without Repeating Characters
+- Find Anagrams
+- Minimum Window Substring
+
+Tip:  
+Whenever asked "longest substring with a property" — immediately think Sliding Window!
+
+---
+
+ 🔥 3. HashMap / Frequency Counters
+
+ ➔ Idea:
+Track counts of characters.
+
+Common Uses:
+- Checking anagrams
+- Longest substring with at most k distinct characters
+
+Tip:  
+When tracking frequencies or matching counts (especially characters) — think HashMap or array of size 26 if only lowercase!
+
+---
+
+ 🔥 4. Sorting + Greedy (String Style)
+
+ ➔ Idea:
+Sort characters and make greedy choices.
+
+Common Uses:
+- Reorganize strings
+- Group Anagrams
+
+Tip:  
+Sort when you need to group or arrange strings in a specific order.
+
+---
+
+ 🔥 5. Character Array (instead of Strings)
+
+ ➔ Idea:
+Mutate strings easily by converting to list of characters.
+
+Example:
+- Strings in Python/Java are immutable → convert to list to edit.
+
+```python
+s = list(s)
+s[0] = 'a'
+```
+
+Tip:  
+If you need to modify characters individually, switch to char arrays/lists.
+
+---
+
+ 🔥 6. KMP Algorithm (for Substring Search)
+
+ ➔ Idea:
+Efficiently find a substring inside another string.
+
+Common Uses:
+- Implement `strStr()`
+- Pattern matching
+
+Tip:  
+If brute force substring search is too slow (O(nm)), consider KMP for O(n+m).
+
+---
+
+ 🔥 7. Trie (Prefix Tree) (Important for Word Problems)
+
+ ➔ Idea:
+Special tree structure to store prefixes.
+
+Common Uses:
+- Word Search
+- Autocomplete
+- Dictionary implementation
+
+Tip:  
+If asked for prefixes or multiple word searches, Tries are super powerful.
+
+---
+
+ 🔥 8. Backtracking (String Version)
+
+ ➔ Idea:
+Try all combinations or partitions of a string.
+
+Common Uses:
+- Palindrome Partitioning
+- Restore IP Addresses
+
+Tip:  
+If asked for "all ways to split" a string → use backtracking.
+
+---
+
+ 🔥 9. Dynamic Programming (for Substring Patterns)
+
+ ➔ Idea:
+Store answers to subproblems (often 2D DP).
+
+Common Uses:
+- Longest Palindromic Substring
+- Longest Common Subsequence
+- Edit Distance
+
+Tip:  
+If the problem involves choices or overlapping substrings, think DP!
+
+---
+
+ 🔥 10. Stack (for Parentheses and Decoding)
+
+ ➔ Idea:
+Push and pop characters to simulate operations.
+
+Common Uses:
+- Valid Parentheses
+- Decode Strings ("3[a2[c]]" → "accaccacc")
+
+Tip:  
+Whenever there's nested structure (like brackets, decoding), think Stack.
+
+---
+
+ 🔥 11. Bit Manipulation (Rare but Cool)
+
+ ➔ Idea:
+Use bits to represent presence/absence of characters (for optimization).
+
+Common Uses:
+- Unique characters check
+- Subset masks for strings
+
+Tip:  
+If constraints are tight (only 'a' to 'z'), you can optimize using bits.
+
+---
+
+ 🔥 12. Regular Expressions (Regex)
+
+ ➔ Idea:
+Pattern matching strings.
+
+Common Uses:
+- IP Address Validation
+- Email Validation
+- Lexical Parsing
+
+Tip:  
+Sometimes built-in regex tools save time for complex matching problems!
+
+---
+
+ 🔥 13. Matrix Traversal in String Grids
+
+ ➔ Idea:
+Handle 2D board of characters as a grid (like DFS).
+
+Common Uses:
+- Word Search
+- Boggle Game
+
+Tip:  
+Think DFS or backtracking on grid whenever asked for "finding words" on 2D boards.
+
+---
+
+ 🚀 String Techniques Quick Reference
+
+| Technique         | When to Think About It |
+|:------------------|:-----------------------|
+| Two Pointers       | Palindromes, Reversals |
+| Sliding Window     | Longest/Shortest substrings |
+| HashMap/Frequency  | Counting characters |
+| Sorting + Greedy   | Grouping, reorganizing |
+| Character Array    | Mutating characters |
+| KMP Algorithm      | Substring search efficiently |
+| Trie               | Prefix based problems |
+| Backtracking       | Partitioning or generating possibilities |
+| Dynamic Programming| Substrings, subsequences |
+| Stack              | Parentheses, decoding problems |
+| Bit Manipulation   | Optimize character tracking |
+| Regular Expressions| Complex pattern validation |
+| Matrix Traversal   | 2D boards, grids of characters |
