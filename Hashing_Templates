@@ -1,0 +1,137 @@
+Hashing templates toolbox 🛠️
+
+ 🔥 1. HashSet Template (for checking duplicates)
+
+Set<Integer> set = new HashSet<>();
+
+for (int num : nums) {
+    if (set.contains(num)) {
+        // Duplicate found
+        return true;
+    }
+    set.add(num);
+}
+// No duplicates
+return false;
+
+
+✅ Used in:  
+- Contains Duplicate
+- Two Sum
+- Checking for visited elements
+
+---
+
+ 🔥 2. HashMap Template (for counting frequencies)
+
+Map<Character, Integer> map = new HashMap<>();
+
+for (char c : str.toCharArray()) {
+    map.put(c, map.getOrDefault(c, 0) + 1);
+}
+
+
+✅ Used in:  
+- Anagram Problems
+- Character Frequency
+- Majority Element
+
+(Notice getOrDefault(c, 0) — very handy to avoid null errors!)
+
+---
+
+ 🔥 3. Two Sum Trick (HashSet or HashMap)
+
+
+Set<Integer> set = new HashSet<>();
+for (int num : nums) {
+    if (set.contains(target - num)) {
+        return true; // Found the pair
+    }
+    set.add(num);
+}
+return false;
+
+
+✅ Used in:  
+- Two Sum
+- Pair Sum problems
+
+(Save the complement while iterating — super smart!)
+
+---
+
+ 🔥 4. Group By Some Key (HashMap of List)
+
+
+Map<String, List<String>> map = new HashMap<>();
+
+for (String word : words) {
+    char[] arr = word.toCharArray();
+    Arrays.sort(arr);
+    String key = new String(arr);
+    
+    map.computeIfAbsent(key, k -> new ArrayList<>()).add(word);
+}
+
+
+✅ Used in:  
+- Group Anagrams
+- Categorizing problems
+
+(Key idea: sort word to detect anagrams easily.)
+
+---
+
+ 🔥 5. Track First Occurrence (Index Mapping)
+
+
+Map<Character, Integer> map = new HashMap<>();
+
+for (int i = 0; i < str.length(); i++) {
+    char c = str.charAt(i);
+    if (!map.containsKey(c)) {
+        map.put(c, i); // Save first index
+    }
+}
+
+
+✅ Used in:  
+- Isomorphic Strings
+- Pattern Matching
+
+---
+
+ 🚀 Bonus: Fast Frequency Map (One-Liner Java 8 Style)
+
+
+Map<Character, Long> freq = str.chars()
+    .mapToObj(c -> (char)c)
+    .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+
+
+(But for now, stick with simple loops — one-liners look cool, but loops are easier to debug!)
+
+---
+
+ 🎯 Summary Table
+
+| Goal | Use |
+|:---|:---|
+| Check Existence Fast | HashSet |
+| Count Frequency | HashMap |
+| Group Items by Key | HashMap of List |
+| Find Pair Sum | HashSet |
+| Track First Occurrence | HashMap |
+
+---
+
+ 💬 Quick Tip:
+
+Whenever a problem says:
+- "Find if exists..."
+- "Count how many..."
+- "Group similar things..."
+- "Find the first unique..."
+  
+👉 Think about HashSet or HashMap immediately!
