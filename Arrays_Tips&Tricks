@@ -1,0 +1,160 @@
+🔥 1. Prefix Sum (for range sums, subarray problems)
+- Idea: Precompute sums to answer sum/range queries faster.
+- Typical problems: Subarray sum equals k, Range Sum Query.
+- Tip: Watch for cumulative patterns or "sum from i to j" in problem statements.
+
+---
+
+ 🔥 2. Two Pointers (left/right pointers, sliding window)
+- Idea: Use two pointers to move inward or outward.
+- Types:
+  - Opposite Direction: (start from both ends — for sorted arrays)
+  - Same Direction: (start from the beginning — for subarrays)
+- Typical problems: Sorted arrays (pair sum), move zeros, remove duplicates.
+
+---
+
+ 🔥 3. Sliding Window (Fixed size / Variable size)
+- Idea: Maintain a "window" and slide it across the array.
+- Use when: You are tracking subarrays, maximums, counts inside the window.
+- Fixed window: e.g., "find max sum of size k"
+- Dynamic window: e.g., "smallest subarray with sum ≥ target"
+
+---
+
+ 🔥 4. Hashing (HashMap / Set) (for fast lookup, counting, duplicates)
+- Idea: Save frequency, index, or simply existence.
+- Typical problems: Two Sum, contains duplicate, longest consecutive sequence.
+- Tip: Always ask yourself — "Can I solve this faster with O(1) lookups?"
+
+---
+
+ 🔥 5. Sorting + Greedy Thinking
+- Idea: Sort first, then apply logic smartly (greedy choices).
+- Typical problems: Meeting Rooms, Merge Intervals, Minimum number of platforms.
+- Tip: Sorting unlocks "local optimal" decisions!
+
+---
+
+ 🔥 6. Binary Search on Arrays
+- Idea: Divide and conquer sorted arrays to find elements quickly.
+- When: Array is sorted, rotated, or implicit search space exists.
+- Typical problems: Search in Rotated Array, Kth smallest element, etc.
+- Tip: Master variants (lower bound, upper bound, search insert position).
+
+---
+
+ 🔥 7. Greedy Partitioning / Grouping
+- Idea: Split the array into valid groups following greedy rules.
+- Typical problems: Partition Labels, Split Array Largest Sum.
+- Tip: After sorting or observing patterns, always think: "Can I group smartly?"
+
+---
+
+ 🔥 8. Backtracking (Rare for arrays, but needed sometimes)
+- Idea: Try all possible combinations/subsets.
+- Typical problems: Subsets, Combination Sum.
+- Tip: Use recursion for exploration + choose / not choose style.
+
+---
+
+ 🔥 9. Monotonic Stack / Deque (for Next Greater Element patterns)
+- Idea: Maintain elements in increasing/decreasing order.
+- Typical problems: Largest Rectangle in Histogram, Daily Temperatures.
+- Tip: Think of it whenever you're asked for "next greater" or "previous smaller".
+
+---
+
+ 🔥 10. Kadane’s Algorithm (Max Subarray Sum)
+- Idea: Local max vs Global max approach.
+- Typical problems: Maximum Subarray, Maximum Product Subarray (careful here with negatives).
+- Tip: Always think: "At each index, should I continue the previous subarray or start new?"
+
+---
+
+ 🔥 11. Bit Manipulation Tricks (in special array problems)
+- Idea: Use XOR for finding unique elements.
+- Typical problems: Single Number, Find Missing Number.
+- Tip: Whenever there's "every element appears twice except one," think XOR.
+
+---
+
+ 🔥 12. Matrix Traversal Patterns (Arrays of Arrays)
+- Idea: Treat the 2D array like graph traversal.
+- Typical problems: Rotate Image, Spiral Matrix, Search 2D Matrix.
+- Tip: Handle boundaries carefully (row, col indices) and direction changes.
+
+---
+
+ 🔥 13. Heap (Priority Queue) (for Top K, Merging)
+- Idea: Maintain dynamic min/max elements.
+- Typical problems: Kth largest element, Top K frequent elements.
+- Tip: If asked for "kth" or "top k", think Heap immediately.
+
+---
+
+ 🧠 When practicing a problem, ask:
+1. What are the inputs/outputs? (Size, Constraints)
+2. Is it sorted / partially sorted? (→ Binary Search / Two Pointers)
+3. Are we dealing with subarrays or subsequences? (→ Sliding Window / Prefix Sum)
+4. Do we care about frequency / uniqueness? (→ HashMap / Set)
+5. Are there optimization hints like "maximize", "minimum" etc.? (→ Greedy / DP)
+
+---
+
+ 🎯 Final Pro Tip:
+Classify the problem FIRST before you code.
+(If you pick wrong approach = wasted 30 minutes. Pick right approach = 10 min AC.)
+
+---
+ ✅ Array Problem Checklist
+
+ 1. Size Matters First
+- Check array size:  
+  - Small (≤ 20)? → maybe Brute Force is fine.
+  - Medium (~10³)? → O(n log n) acceptable.
+  - Large (~10⁵ or more)? → You NEED O(n).
+
+---
+
+ 2. Sorted / Can Be Sorted?
+- Already sorted? → Think Two Pointers, Binary Search.
+- Can sort? → Think Greedy, Two Pointers after sorting.
+
+---
+
+ 3. Subarray / Subsequence Involved?
+- Fixed size subarray? → Sliding Window (Fixed).
+- Variable size subarray? → Sliding Window (Dynamic) or Two Pointers.
+- Whole array sums? → Prefix Sum.
+
+---
+
+ 4. Duplicates / Frequencies Important?
+- Track elements? → Use a HashMap or Set.
+- Remove duplicates? → Maybe Set or Two Pointers if sorted.
+
+---
+
+ 5. "Max / Min / Kth" or "Top K" Questions?
+- Max/Min sums? → Kadane’s, Sliding Window.
+- Kth largest/smallest? → Heap (Priority Queue) or Binary Search.
+
+---
+
+ 6. "Next Greater/Smaller" Hints?
+- Immediate neighbor comparisons? → Use a Monotonic Stack.
+
+---
+
+ 7. Special Trick Hints:
+- XOR mentioned? → Bit Manipulation (Single Number, Missing Number).
+- Partitioning or cutting? → Greedy + maybe Binary Search.
+- 2D array? → Handle like Matrix Traversal (Spiral, DFS, BFS).
+
+---
+
+ 📌 Summary Cheat-Line
+> 🔥 “Size → Sorted? → Subarrays? → Duplicates? → Max/Min/Kth? → Next Greater? → Special Tricks?”
+
+---
