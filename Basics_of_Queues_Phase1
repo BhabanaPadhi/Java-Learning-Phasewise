@@ -1,0 +1,140 @@
+ 📚 Queue 
+
+ 🔸 1. What is a Queue?
+A Queue is a linear data structure that follows the FIFO (First In, First Out) principle.
+ Enqueue → Add element to the rear
+ Dequeue → Remove element from the front
+ 🧠 RealLife Analogy:
+Think of a line at a ticket counter — the person who enters the line first gets served first.
+
+ 🔸 2. Basic Operations
+| Operation    | Description                            | Time Complexity |
+|  |  |  |
+| `enqueue(x)` | Add `x` to the rear                    | O(1)            |
+| `dequeue()`  | Remove item from the front             | O(1)            |
+| `peek()`     | View the front item without removing   | O(1)            |
+| `isEmpty()`  | Check if the queue is empty            | O(1)            |
+| `isFull()`   | (If fixed size) Check if queue is full | O(1)            |
+
+ 🔸 3. Types of Queues
+
+ ✅ a. Linear Queue
+ Basic queue using array or linked list.
+ Simple to implement, but arraybased queues may waste space after repeated dequeues.
+
+ ✅ b. Circular Queue
+ Arraybased queue where `rear` wraps around to the beginning using:
+  `rear = (rear + 1) % size`
+ Efficient space usage.
+
+ 🔍 Full Condition:
+ Queue is full: `(rear + 1) % size == front`
+ Queue is empty: `front == 1`
+
+ ✅ c. Priority Queue
+ Elements are dequeued based on priority, not arrival order.
+ Usually implemented using heaps:
+   Min Heap: smallest element has highest priority
+   Max Heap: largest element has highest priority
+
+ ✅ d. Deque (DoubleEnded Queue)
+ Insertion and deletion can be done from both front and rear.
+ Useful in sliding window problems, palindrome checks, etc.
+
+ 🔸 4. Implementation Approaches
+
+ ✅ ArrayBased Queue
+
+int[] queue = new int[size];
+int front = 0;
+int rear = 1;
+int count = 0;
+
+void enqueue(int x) {
+  if (count == size) // full
+  queue[++rear % size] = x;
+  count++;
+}
+
+void dequeue() {
+  if (count == 0) // empty
+  front = (front + 1) % size;
+  count;
+}
+
+ ✅ Linked ListBased Queue
+
+ Use a Node class.
+ Maintain `head` (front) and `tail` (rear) pointers.
+ Dynamically resizable.
+
+ ✅ Java Builtin Queue
+
+Queue<Integer> queue = new LinkedList<>();
+queue.add(1);     // enqueue
+queue.poll();     // dequeue
+queue.peek();     // front element
+queue.isEmpty();  // check empty
+
+ 🔸 5. Queue Use Cases
+
+| Application             | Description                              |
+|  |  |
+| BFS in graphs/trees     | Traverse nodes levelbylevel            |
+| CPU/Job scheduling      | Tasks executed in the order received     |
+| Message queues          | Used in async programming, event systems |
+| Sliding window problems | Maximum/minimum in a range using deque   |
+| LRU Cache (with deque)  | Least Recently Used caching mechanism    |
+
+ 🔸 6. Important Patterns
+
+ 🌀 BreadthFirst Search (BFS)
+ Use queue to explore neighbors level by level in a graph/tree.
+
+ 🔁 Sliding Window
+ Use deque to maintain useful elements inside the window range.
+
+ 🔀 Stack Using Queues / Queue Using Stacks
+ Classic problems to understand queuestack conversion.
+
+ 🔸 7. Common Interview Problems (EasyMedium)
+
+1. Implement a queue using array/linked list
+2. Reverse the first K elements of a queue
+3. Implement a circular queue
+4. Design a queue using stacks
+5. First nonrepeating character in a stream
+6. Sliding window maximum (using deque)
+7. Level order traversal of binary tree
+
+ 🔸 8. Queue vs Stack
+
+| Feature    | Queue           | Stack          |
+|  |  |  |
+| Order      | FIFO            | LIFO           |
+| Insertions | Rear            | Top            |
+| Deletions  | Front           | Top            |
+| Use Cases  | BFS, scheduling | DFS, recursion |
+
+
+
+ 📝 Summary Cheatsheet
+Queue:
+ FIFO structure
+ Basic ops: enqueue, dequeue, peek, isEmpty
+ Implement via array, linked list, or builtin types
+
+Types:
+ Circular Queue: space efficient
+ Priority Queue: based on priority (heap)
+ Deque: doubleended queue
+
+Uses:
+ BFS traversal
+ Scheduling & buffers
+ Sliding window problems
+
+Practice:
+ Reverse K elements
+ BFS on graph/tree
+ Design Queue/Stack from other DS
