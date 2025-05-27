@@ -1,0 +1,73 @@
+ 📘 Recursion in Java – Study Notes
+
+ 🔁 1. What is Recursion?
+Definition: A method calling itself to solve smaller instances of the same problem.
+ Structure:
+void recurse(parameters) {
+    if (base_condition) return;         // Base case
+    recurse(smaller_problem);           // Recursive case
+}
+
+ 🧠 2. Key Components of Recursion
+| Component      | Description                                              |
+|  |  |
+| Base Case      | Stops recursion; prevents infinite loop                  |
+| Recursive Case | Reduces the problem and makes the recursive call         |
+| Call Stack     | Each recursive call is stored in memory until it returns |
+
+ 🧩 3. Types of Recursion
+| Type     | Description                              | Example                     |
+|  |  |  |
+| Direct   | Method calls itself directly             | f() { f(); }              |
+| Indirect | Method A calls B, B calls A              | a() { b(); } b() { a(); } |
+| Tail     | Recursive call is the last statement     | return recurse(n1);      |
+| NonTail | Recursive call followed by extra work    | int x = recurse(n1) + 1; |
+| Tree     | Multiple recursive calls in one function | f(n) = f(n1) + f(n2)    |
+
+ 📏 4. Designing a Recursive Function
+1. Define the problem in terms of smaller subproblems.
+2. Identify the base case.
+3. Determine how to reduce the problem toward the base case.
+4. Make the recursive call.
+5. Combine results (if needed).
+
+ ⚠️ 5. Common Mistakes to Avoid
+ Forgetting the base case → StackOverflowError
+ Not reducing the problem → Infinite recursion
+ Using recursion for large n without optimization (memoization)
+
+ 💻 6. JavaSpecific Notes
+ Recursion uses the call stack internally.
+ Java does not optimize tail recursion → avoid deep recursions.
+ Prefer iteration or memoization for heavy recursion.
+
+ ⏱️ 7. Time and Space Complexity
+| Pattern          | Time Complexity | Space Complexity (stack) |
+|  |  |  |
+| Linear           | O(n)            | O(n)                     |
+| Binary Tree      | O(2^n)          | O(n)                     |
+| With Memoization | O(n) or O(n^2)  | O(n)                     |
+
+ 🔍 8. Common Recursive Patterns
+| Pattern              | Used For                              |
+|  |  |
+| Linear Recursion     | Factorial, Sum, Fibonacci (bad)       |
+| Divide & Conquer     | Merge Sort, Binary Search             |
+| Backtracking         | NQueens, Maze, Subsets, Permutations |
+| Recursion with State | Tree Traversals, Graph DFS            |
+| Memoization          | Fibonacci, DP problems                |
+
+ 🌳 9. Understanding via Recursion Trees
+Use a recursion tree to:
+ Visualize function calls
+ Analyze time complexity
+ Understand depth of recursion
+
+ 🧰 10. Tips for Interview Preparation
+ Always start with base case when writing code.
+ Dryrun the code for small inputs.
+ Think in terms of problem reduction.
+ Recognize patterns: Backtracking, Divide & Conquer.
+ Be able to convert recursion to iteration (and vice versa).
+ Practice writing both recursive and iterative solutions.
+ Explain your recursion tree to the interviewer if needed.
