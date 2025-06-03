@@ -97,3 +97,19 @@ set.add("cherry");
 for (String s : set) {
     System.out.println(s);
 }
+
+
+
+Difference:
+
+| Feature                | `HashMap<K, V>`                                   | `HashSet<E>`                                     |
+| ---------------------- | ------------------------------------------------- | ------------------------------------------------ |
+| Purpose            	   | Stores key-value pairs                        	   | Stores unique elements                       	   |
+| Internal Structure 	   | Backed by array of buckets with `Node<K, V>`  	   | Internally uses a `HashMap<E, Object>`       	   |
+| Duplicates Allowed 	   | Keys must be unique, values can be duplicated 	   | No duplicates allowed                        	   |
+| Null Support       	   | Allows one null key and multiple null values  	   | Allows only one null element                 	   |
+| Methods            	   | `put(key, value)`, `get(key)`, `remove(key)`      | `add(value)`, `contains(value)`, `remove(value)` |
+| Key Operations     	   | Retrieve/update values via keys                   | Add/remove/check existence of values             |
+| Underlying Usage   	   | Used when mapping one value to another            | Used when checking existence only            	   |
+| Entry Example      	   | `{"apple" → 100}`                                 | `["apple"]`                                      |
+
