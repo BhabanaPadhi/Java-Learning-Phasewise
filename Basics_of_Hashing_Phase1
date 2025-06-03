@@ -1,0 +1,99 @@
+ 📝 Hashing Summary
+
+ 🔹 What is Hashing?
+ Hashing: Converts input data to a fixed-size hash value using a hash function.
+ Hash Function: Maps a key to an index.
+ Hash Table: Stores key-value pairs using hashing for fast access.
+
+ 🔹 Key Concepts:
+ Collisions: Occur when two keys hash to the same index.
+
+ Collision Resolution:
+   Chaining (linked list or tree)
+   Open Addressing (linear/quadratic probing)
+ Load Factor: When exceeded, triggers rehashing.
+ Cryptographic Hashing: Secure, one-way, deterministic, collision-resistant.
+
+ 🧩 HashMap Summary
+
+ ✅ Features:
+
+ Stores key-value pairs.
+ Allows one null key and multiple null values.
+ Unordered (not sorted or insertion order guaranteed).
+ Uses hashing to store keys and resolve collisions.
+
+ ⚙️ Common Methods & Examples:
+
+| Method                    | Example                                               |
+| ------------------------- | ----------------------------------------------------- |
+| put(K key, V value)     | map.put("apple", 100);                              |
+| get(Object key)         | map.get("apple"); // returns 100                    |
+| remove(Object key)      | map.remove("apple");                                |
+| containsKey(Object k)   | map.containsKey("apple"); // true/false             |
+| containsValue(Object v) | map.containsValue(100); // true/false               |
+| keySet()                | Set<String> keys = map.keySet();                    |
+| values()                | Collection<Integer> vals = map.values();            |
+| entrySet()              | for (Map.Entry<String, Integer> e : map.entrySet()) |
+
+ 🌱 HashSet Summary
+
+ ✅ Features:
+
+ Stores unique elements.
+ Backed internally by a HashMap.
+ Only one null element allowed.
+ No duplicates, no guaranteed order.
+
+ ⚙️ Common Methods & Examples:
+
+| Method               | Example                                |
+| -------------------- | -------------------------------------- |
+| add(E e)           | set.add("apple");                    |
+| remove(Object o)   | set.remove("apple");                 |
+| contains(Object o) | set.contains("apple"); // true/false |
+| size()             | int n = set.size();                  |
+| clear()            | set.clear();                         |
+| isEmpty()          | set.isEmpty(); // true/false         |
+| iterator()         | for (String s : set) {}              |
+
+ 🔍 Short Code Examples of Each Method
+
+ ✅ HashMap Examples
+
+Map<String, Integer> map = new HashMap<>();
+
+map.put("apple", 10);
+System.out.println(map.get("apple"));           // 10
+map.remove("apple");
+System.out.println(map.containsKey("apple"));   // false
+
+map.put("banana", 20);
+System.out.println(map.containsValue(20));      // true
+
+Set<String> keys = map.keySet();                // [banana]
+Collection<Integer> values = map.values();      // [20]
+
+for (Map.Entry<String, Integer> e : map.entrySet()) {
+    System.out.println(e.getKey() + " -> " + e.getValue());
+}
+
+
+ ✅ HashSet Examples
+
+Set<String> set = new HashSet<>();
+
+set.add("apple");
+set.add("banana");
+System.out.println(set.contains("apple"));      // true
+set.remove("apple");
+System.out.println(set.contains("apple"));      // false
+
+System.out.println(set.size());                 // 1
+set.clear();
+System.out.println(set.isEmpty());              // true
+
+set.add("cherry");
+for (String s : set) {
+    System.out.println(s);
+}
