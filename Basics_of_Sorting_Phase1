@@ -134,3 +134,77 @@ public class BubbleSort {
 | Adaptive     | ❌ (No)                        | ✅ (Yes)                                  |
 | Ideal Use    | Small data, no stability need | When stability or adaptiveness is needed |
 
+ 🟩 INSERTION SORT
+
+ ✅ Concept
+Insertion Sort builds the sorted array one item at a time by picking an element and inserting it into its correct position among the previously sorted elements.
+
+ 🧠 Working
+1. Start from the second element (index 1).
+2. Compare it with elements before it.
+3. Shift all larger elements one position to the right.
+4. Insert the current element into the correct spot.
+5. Repeat until the end.
+
+ 🔁 Time Complexity
+ Best: `O(n)` (already sorted)
+ Average: `O(n²)`
+ Worst: `O(n²)`
+ Space: `O(1)` (In-place)
+ Stable: ✅ (Does not swap non-equal elements)
+
+ 📌 Example
+
+Array: `[5, 2, 4, 6, 1, 3]`
+
+i = 1 → Insert 2 → [2, 5, 4, 6, 1, 3]  
+i = 2 → Insert 4 → [2, 4, 5, 6, 1, 3]  
+i = 3 → Insert 6 → [2, 4, 5, 6, 1, 3]  
+i = 4 → Insert 1 → [1, 2, 4, 5, 6, 3]  
+i = 5 → Insert 3 → [1, 2, 3, 4, 5, 6]  
+Sorted!
+
+ ✅ Java Code: Insertion Sort
+
+public class InsertionSort {
+    public static void insertionSort(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 1; i < n; i++) {
+            int key = arr[i];        // Current element to insert
+            int j = i - 1;
+
+            // Move elements greater than key one position ahead
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+
+            arr[j + 1] = key;       // Insert at correct position
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 4, 6, 1, 3};
+        insertionSort(arr);
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+
+ 🔄 Comparison Table (with previous sorts)
+
+| Feature    | Selection Sort | Bubble Sort | Insertion Sort                     |
+| ---------- | -------------- | ----------- | ---------------------------------- |
+| Best Time  | O(n²)          | O(n)        | O(n)                               |
+| Worst Time | O(n²)          | O(n²)       | O(n²)                              |
+| Space      | O(1)           | O(1)        | O(1)                               |
+| Stable     | ❌ No           | ✅ Yes       | ✅ Yes                              |
+| Adaptive   | ❌ No           | ✅ Yes       | ✅ Yes                              |
+| Swaps      | Fewer          | Many        | Moderate                           |
+| Ideal For  | Small, simple  | Teaching    | Partially sorted or small datasets |
+
+
